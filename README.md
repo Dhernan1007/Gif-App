@@ -36,8 +36,6 @@ Inicia la aplicación:
 
 ```
 npm run dev
-# o
-yarn run dev
 ```
 Abre tu navegador y ve a http://localhost:3000 para usar la aplicación.
 
