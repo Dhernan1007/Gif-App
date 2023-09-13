@@ -37,7 +37,7 @@ Inicia la aplicación:
 ```
 npm run dev
 ```
-Abre tu navegador y ve a http://localhost:3000 para usar la aplicación.
+Abre tu navegador y ve a http://localhost:5173/ para usar la aplicación.
 
 Ingresa un término de búsqueda en el campo de búsqueda y presiona "Buscar" para ver los GIFs relacionados.
 
