@@ -1,10 +1,11 @@
-import GifItem from "./GifItem";
+import { GifItem } from "./GifItem";
 import useFetchGifs from "../hooks/useFetchGifs";
 import { useState } from "react";
+import PropTypes from 'prop-types'
 
 export const GifGrid = ({ category }) => {
 
-  const { images } = useFetchGifs(category);
+  const { images, isLoading } = useFetchGifs(category);
   const [times, setTimes] = useState(false)
 
   setTimeout(() => {
@@ -13,9 +14,9 @@ export const GifGrid = ({ category }) => {
 
   return (
     <>
-      {!times ? <>
+      {!times ? <> {isLoading && (
         <span className="loader">L &nbsp; ading</span>
-
+      )}
       </>
         : <>
           <h3>{category}</h3>
@@ -33,3 +34,6 @@ export const GifGrid = ({ category }) => {
   )
 }
 
+GifGrid.propTypes = {
+  category: PropTypes.string.isRequired,
+}

@@ -94,3 +94,10 @@
       transform: rotate(360deg);
     }
   } 
+
+  .buttonReset {
+    background-color: rgb(60, 224, 6);
+    color: #fff;
+    border: solid color(srgb rgb(67, 9, 9) rgb(76, 231, 19) rgb(169, 169, 247));
+    border-radius: 5px;
+  }

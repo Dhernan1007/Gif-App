@@ -4,7 +4,7 @@ import { AddCategory, GifGrid } from "./component";
 
 const GifExpertApp = () => {
 
-  const [categories, setCategories] = useState([]);
+  const [categories, setCategories] = useState(['Dragon Ball Z']);
 
   const onAddCategory = (newCategory) => {
 
@@ -14,6 +14,11 @@ const GifExpertApp = () => {
 
     setCategories([newCategory, ...categories])
   }
+
+  const onResetState = () => {
+    setCategories([]);
+  }
+
 
   return (
     <>
@@ -25,6 +30,7 @@ const GifExpertApp = () => {
         onNewCategory={onAddCategory} 
       />
       <br />
+      <button id="buttonInit" className="buttonReset" onClick={onResetState}>Reset Categories</button>
       <br />
 
         {
@@ -34,8 +40,6 @@ const GifExpertApp = () => {
              />
           ))
         }
-     
-
     </>
   )
 }
